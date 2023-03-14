@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Winner of the Duel</title>
+</head>
+
+<body>
+    <h1>WINNER!!!</h1>
+    <br>
+    <h2>
+        <%= winnerName %>
+    </h2>
+    <form action="/game" method="post">
+        <input id="humanPlayer-name-textbox" type="text" name="humanPlayer" value="<%= humanName %>" hidden></p>
+        <input id="botPlayer-name" type="hidden" name="botPlayer" value="<%= botName %>" hidden>
+        <input id="playAgain-button" type="submit" value="Play Again">
+    </form>
+    <a id="end-link" href="/">Exit</a>
+</body>
+
+</html>

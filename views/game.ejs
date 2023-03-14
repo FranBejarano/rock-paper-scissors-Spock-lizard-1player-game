@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock, Paper, Scissors</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row" style="display: flex; justify-content: space-around;">
+            <div class="col-4">
+                <h1>Player: <%= humanName %>
+                </h1>
+                <h1>Victories: <%= humanVictories %>
+                </h1>
+                <form action="/turn" method="post">
+                    <label for="selector">Select Rock, Paper, Scissors, Spock or Lizard</label>
+                    <select name="selector" id="selector" required>
+                        <option value="Choose an option" selected disabled>Choose an option</option>
+                        <option value="rock">Rock</option>
+                        <option value="paper">Paper</option>
+                        <option value="scissors">Scissors</option>
+                        <option value="Spock">Spock</option>
+                        <option value="lizard">Lizard</option>
+                    </select>
+                    <br>
+                    <input id="play-button" type="submit" value="Play">
+                </form>
+            </div>
+            <div class="col-4 align-right">
+                <h1>
+                    <%= botName %>
+                </h1>
+                <h1>Victories: <%= botVictories %>
+                </h1>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
